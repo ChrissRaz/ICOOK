@@ -4,10 +4,19 @@ import {  createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 
 
-import Login from '../pages/Login';
-import Inscription from '../pages/Inscription';
+import Login from '../pages/online/Login';
+import Inscription from '../pages/online/Inscription';
+import  Accueil from '../pages/Accueil';
+import MainScreen from '../pages/offline/mainSceen';
+
+
+
 
 const navigators = createStackNavigator({
+    Accueil:
+    {
+        screen: Accueil
+    },
     Login:
     {
         screen: Login,
@@ -23,6 +32,10 @@ const navigators = createStackNavigator({
         {
             title:"Inscription"
         }
+    },
+    OfflineMainScreen:
+    {
+        screen: MainScreen
     }
 });
 

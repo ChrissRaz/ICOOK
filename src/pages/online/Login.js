@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, Image, View, TouchableOpacity, StyleSheet, KeyboardAvoidingView } from 'react-native';
 
-import LoginForm from "../components/LoginForm";
+import LoginForm from "../../components/LoginForm";
 
 
 export default class Login extends React.Component {
@@ -9,7 +9,7 @@ export default class Login extends React.Component {
         return (
             <KeyboardAvoidingView behavior="padding" style={style.base}>
                 
-                <Image style={style.ban}  source={require('../../Media/images/ban1.png')} />
+                <Image style={style.ban}  source={require('../../../Media/images/ban1.png')} />
 
                 <View style={style.form}>
                     <LoginForm />
@@ -42,8 +42,9 @@ const style = StyleSheet.create(
         },
         ban:
         {
-            flex: 4,
+            
             alignItems: "center",
+            height: 200
          
         },
         form:

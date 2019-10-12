@@ -2,6 +2,8 @@ import React from 'react';
 import { Text, TextInput, View, StyleSheet, Button, TouchableOpacity
  } from 'react-native';
 import { yellow } from 'ansi-colors';
+import { themeColor } from '../shared/vars';
+
 
 
 
@@ -15,9 +17,9 @@ export default class LoginForm extends React.Component {
             <View style={style.base}>
                 <Text style={style.header}>Connexion</Text>
 
-                <TextInput underlineColorAndroid={"#ffc107"} onSubmitEditing={()=>this.passIn.focus()} returnKeyType="next" returnKeyLabel="suivant" style={style.forms} placeholder="Nom d'utilisateur"/>
+                <TextInput underlineColorAndroid={themeColor} onSubmitEditing={()=>this.passIn.focus()} returnKeyType="next" returnKeyLabel="suivant" style={style.forms} placeholder="Nom d'utilisateur"/>
                 
-                <TextInput underlineColorAndroid={"#ffc107"} ref={(input)=>this.passIn = input} returnKeyType="go" returnKeyLabel="connection" secureTextEntry={true} style={style.forms} placeholder="Mot de passe"/>
+                <TextInput underlineColorAndroid={themeColor} ref={(input)=>this.passIn = input} returnKeyType="go" returnKeyLabel="connection" secureTextEntry={true} style={style.forms} placeholder="Mot de passe"/>
 
                 <TouchableOpacity style={style.forgotText}>
                     <Text style={style.forgotTextContent}>
@@ -47,7 +49,8 @@ const style = StyleSheet.create(
         header:
         {
             flex:1,
-            fontSize: 35
+            fontSize: 35,
+            fontWeight: 'bold'
         },
         forms:
         {

@@ -1,0 +1,1 @@
+export var themeColor = "#ffc107";
